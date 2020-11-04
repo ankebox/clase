@@ -6,7 +6,8 @@ public class Alumno {
     private String numeroMatricula;
     // la edad del alumno
     private int edad;
-
+    
+    
     /**
      * Crea un alumno nuevo
      */
@@ -14,6 +15,13 @@ public class Alumno {
         nombre = nombreCompleto;
         numeroMatricula = numeroMatriculaAlumno;
         edad = edadAlumno;
+        if (nombre.length() < 3){
+             System.out.println("error, pruebe con otro nombre");
+        }
+        if (numeroMatricula.length() < 4){
+            System.out.println("error, pruebe con otro numero de matricula");
+        
+        }
     }
 
     /**
@@ -44,4 +52,8 @@ public class Alumno {
     public String getNombreUsuarioGithub() {
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     }
+    
+    
+    
+    
 }
