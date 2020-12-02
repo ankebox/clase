@@ -45,6 +45,12 @@ public class Alumno {
     public void imprimeDetalles() {
         System.out.println(nombre + " (" + numeroMatricula + ") - " + edad + " años");
     }
+    
+    public String inprimeDetalles(){
+    return (nombre + " (" + numeroMatricula + ") - " + edad + " años");
+    }
+    
+    
     //nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     /**
      * Devuelve el nombre de usuario que el alumno debe configurar
@@ -63,12 +69,7 @@ public class Alumno {
         }
         else{
             if(numeroMatricula.length() >= 4){
-                if(nombre.length() >= 3 ){
-                    usuarioGithub =  nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
-                }
-                else{
-                    usuarioGithub = nombre + numeroMatricula.substring(0, 4);
-                }
+                usuarioGithub = nombre + numeroMatricula.substring(0, 4);   
             }
             else{
                 usuarioGithub = nombre + numeroMatricula;
@@ -78,7 +79,7 @@ public class Alumno {
     }
        
 }
-    
+
     
     
 
